@@ -38,6 +38,11 @@ div#header h3 {
     padding-top: 15px;
 }
 
-div#new-image h5 {
-    padding: 15px 0px;
+div#new_img_header {
+    padding-top: 50px;
+}
+
+div#error_explanation {
+    color: #f00;
+    padding-top: 10px;
 }
