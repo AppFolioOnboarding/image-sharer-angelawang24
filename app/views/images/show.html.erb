@@ -1,4 +1,15 @@
-<%= link_to "Back", new_image_path %>
+<div id="container">
+  <div id="header">
+    <h1>Your image: </h1>
+  </div>
 
-<p><%= @image.url %></p>
-<%=image_tag(@image.url) %>
+  <div id="content">
+    <%= link_to "Back", new_image_path %>
+  </div>
+
+  <!--<p><%= @image.url %></p>-->
+  <div id="image">
+    <%=image_tag(@image.url) %>
+  </div>
+
+</div>

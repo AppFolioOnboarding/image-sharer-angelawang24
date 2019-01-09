@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+valid_img:
+  url: 'https://cdn.pixabay.com/photo/2016/02/19/15/46/dog-1210559__340.jpg'
+
+invalid_img:
+  url: 'https://www.google.com/'
