@@ -13,17 +13,15 @@ class ImagesController < ApplicationController
   def create
     params.permit!
     @image = Image.new(params[:image])
-    if @image.is_valid_image? and @image.save
+    if @image.valid_image? && @image.save
       redirect_to @image
     else
-      @image.errors.add(:url, "is not a valid image url")
+      @image.errors.add(:url, 'is not a valid image url')
       render :new
     end
-
   end
 
   def show
     @image = Image.find(params[:id])
   end
-
 end
