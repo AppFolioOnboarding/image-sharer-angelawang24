@@ -29,36 +29,37 @@ body {
     border-color: #818182;
 }
 
-div#container {
+.container {
     width: 760px;
     margin: 0 auto;
     padding-top: 10px;
 }
 
-div#header {
+
+.header {
     text-align: center;
     padding-bottom: 15px;
     background-color: #9ce3f7
 }
 
-div#header h1 {
+h1.header {
     padding-top: 15px;
 }
 
-div#header h3 {
+h3.header {
     padding-top: 15px;
 }
 
-div#new_img_header {
+.new_img_header {
     padding-top: 50px;
 }
 
-div#error_explanation {
+.error_explanation {
     color: #f00;
     padding-top: 10px;
 }
 
-div#image {
+.image {
     position: center;
     padding-top: 10px;
 }
