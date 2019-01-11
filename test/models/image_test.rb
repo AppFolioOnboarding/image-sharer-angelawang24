@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class ImageTest < ActiveSupport::TestCase
-
   def test_valid_img
     valid_img = Image.new url: images(:valid_img).url
     assert valid_img.save
