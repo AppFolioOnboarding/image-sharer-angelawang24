@@ -1,0 +1,22 @@
+<%= simple_form_for @image do |f| %>
+
+  <div class="new_img_header">
+    <h5>Enter URL of image to save</h5>
+  </div>
+  <div class="field form-group">
+    <%= f.text_field :url, class: 'form-control' %>
+    <%= f.submit "Save" %>
+  </div>
+
+   <% if @image.errors.any? %>
+     <div class="error_explanation">
+       <h4><%= pluralize(@image.errors.count, "error") %> prohibited this image from being saved:</h4>
+
+       <ul>
+         <% @image.errors.full_messages.each do |msg| %>
+            <div><%= msg %></div>
+         <% end %>
+       </ul>
+     </div>
+    <% end %>
+<% end %>
