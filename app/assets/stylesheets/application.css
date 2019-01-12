@@ -62,4 +62,5 @@ h3.header {
 .image {
     position: center;
     padding-top: 10px;
+    max-width: 400px;
 }
