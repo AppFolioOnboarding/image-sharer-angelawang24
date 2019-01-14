@@ -8,11 +8,11 @@
     <%= link_to 'Save an Image', new_image_path, class: "btn btn-primary" %>
   </div>
 
-  <div class="content img-list">
+  <ul class="content img-list">
     <% @images.each do |img| %>
-        <%=image_tag(img.url, class: "image") %>
+        <li><%=image_tag(img.url, class: "image") %></li>
     <% end %>
-  </div>
+  </ul>
 </div>
 </body>
 
