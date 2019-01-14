@@ -1,19 +1,2 @@
-<body class="home">
-<div class="l-container">
-  <div class="l-header header">
-    <h1>Welcome to Image Sharer!</h1>
-  </div>
-
-  <div class="content">
-    <%= link_to 'Save an Image', new_image_path, class: "btn btn-primary" %>
-  </div>
-
-  <div class="content img-list">
-    <% @images.each do |img| %>
-        <%=image_tag(img.url, class: "image") %>
-    <% end %>
-  </div>
-</div>
-</body>
-
-
+<h1>Images#index</h1>
+<p>Find me in app/views/images/index.html.erb</p>

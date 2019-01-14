@@ -3,7 +3,7 @@ require 'net/http'
 
 class ImagesController < ApplicationController
   def index
-    @images = Image.order(created_at: :desc)
+    @images = Image.all
   end
 
   def new

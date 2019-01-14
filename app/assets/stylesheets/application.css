@@ -20,10 +20,6 @@ body {
     background-color: #fff;
 }
 
-.img-list {
-    text-align: center;
-}
-
 .btn-primary,
 .btn-primary:hover,
 .btn-primary:active,
@@ -33,31 +29,37 @@ body {
     border-color: #818182;
 }
 
-.l-container {
+.container {
     width: 760px;
     margin: 0 auto;
     padding-top: 10px;
 }
 
-.l-header {
-    padding: 15px 0px;
-}
 
 .header {
     text-align: center;
-    background-color: #9ce3f7;
+    padding-bottom: 15px;
+    background-color: #9ce3f7
 }
 
-.l-new-img-header {
+h1.header {
+    padding-top: 15px;
+}
+
+h3.header {
+    padding-top: 15px;
+}
+
+.new_img_header {
     padding-top: 50px;
 }
 
-.error-explanation {
+.error_explanation {
     color: #f00;
     padding-top: 10px;
 }
 
 .image {
+    position: center;
     padding-top: 10px;
-    max-width: 400px;
 }
