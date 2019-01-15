@@ -30,7 +30,11 @@ body {
     color: white !important;
 }
 
-.nav-pills .nav-link:hover {
+.nav-pills .nav-link {
+    color: #818182 !important;
+}
+
+.nav-pills .nav-link.active:hover {
     background-color: #bebebf !important;
     color: white !important;
 }
