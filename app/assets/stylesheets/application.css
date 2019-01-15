@@ -32,7 +32,10 @@ body {
     background-color: #818182;
     border-color: #818182;
     color: white;
+}
 
+.btn-card {
+    width: 200px;
 }
 
 .btn-card:hover, .l-container .nav-pills .nav-link.active:hover {
@@ -70,7 +73,7 @@ body {
 }
 
 .l-image {
-    padding-top: 10px;
+    padding: 5px 0px 10px;
     max-width: 400px;
 }
 
@@ -79,7 +82,7 @@ body {
 }
 
 .card {
-    width: 450px;
+    max-width: 450px;
     margin: 0 auto;
     float: none;
     margin-bottom: 10px;
