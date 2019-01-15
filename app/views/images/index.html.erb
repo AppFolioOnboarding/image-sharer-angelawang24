@@ -1,19 +1,19 @@
 <body class="home">
-<div class="l-container">
-  <div class="l-header header">
-    <h1>Welcome to Image Sharer!</h1>
-  </div>
+  <div class="l-container">
+    <div class="l-header header">
+      <h1>Welcome to Image Sharer!</h1>
+    </div>
 
-  <div class="content">
-    <%= link_to 'Save an Image', new_image_path, class: "btn btn-primary" %>
-  </div>
+    <nav class="nav nav-pills">
+      <%= link_to 'Save an Image', new_image_path, class: "nav-link active" %>
+    </nav>
 
-  <ul class="content img-list">
-    <% @images.each do |img| %>
-        <li><%=image_tag(img.url, class: "image") %></li>
-    <% end %>
-  </ul>
-</div>
+    <ul class="content img-list">
+      <% @images.each do |img| %>
+          <li><%=image_tag(img.url, class: "image") %></li>
+      <% end %>
+    </ul>
+  </div>
 </body>
 
 
