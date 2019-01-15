@@ -25,13 +25,14 @@ body {
     list-style-type:none;
 }
 
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:visited,
-.btn-primary:focus {
-    background-color: #818182;
-    border-color: #818182;
+.nav-pills .nav-link.active {
+    background-color: #818182 !important;
+    color: white !important;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #bebebf !important;
+    color: white !important;
 }
 
 .l-container {

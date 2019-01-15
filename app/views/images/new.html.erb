@@ -4,9 +4,11 @@
     <h1>Submit an image </h1>
   </div>
 
-  <nav class="nav">
-    <%= link_to 'Home', root_path, class:"nav-link active"%>
-  </nav>
+  <ul class="nav nav-pills nav-justified">
+    <li class="nav-item">
+      <%= link_to 'Home', root_path, class:"nav-link active"%>
+    </li>
+  </ul>
 
   <div class="new-image">
     <%= render 'form' %>

@@ -3,10 +3,14 @@
     <h1>Your image: </h1>
   </div>
 
-  <nav class="nav">
-    <%= link_to 'Back', new_image_path, class:"nav-link active"%>
-    <%= link_to 'Home', root_path, class:"nav-link active"%>
-  </nav>
+  <ul class="nav nav-pills nav-justified">
+    <li class="nav-item">
+      <%= link_to 'Back', new_image_path, class:"nav-link active"%>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Home', root_path, class:"nav-link active"%>
+    </li>
+  </ul>
 
   <%=image_tag(@image.url, class: "image") %>
 </div>
