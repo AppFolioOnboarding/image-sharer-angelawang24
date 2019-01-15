@@ -14,8 +14,19 @@
     </nav>
 
     <ul class="content img-list">
-      <% @images.each do |img| %>
-          <li><%=image_tag(img.url, class: "image") %></li>
+      <% @images.each_slice(2) do |duo| %>
+        <div class="card-deck">
+          <% duo.each do |img| %>
+              <div class="card">
+                <div class="image">
+                  <%=image_tag(img.url, class: "l-image") %>
+                </div>
+                <div class="card-body">
+                  <%= link_to 'Go To Image', img.url, class: "btn btn-card" %>
+                </div>
+              </div>
+          <% end %>
+         </div>
       <% end %>
     </ul>
   </div>
