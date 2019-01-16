@@ -28,7 +28,7 @@ body {
 .btn-card:active,
 .btn-card:visited,
 .btn-card:focus,
-.l-container .nav-pills .nav-link.active {
+.container .nav-pills .nav-link.active {
     background-color: #818182;
     border-color: #818182;
     color: white;
@@ -38,12 +38,12 @@ body {
     width: 200px;
 }
 
-.btn-card:hover, .l-container .nav-pills .nav-link.active:hover {
+.btn-card:hover, .container .nav-pills .nav-link.active:hover {
     background-color: #bebebf;
     color: white;
 }
 
-.l-container .nav-pills .nav-link {
+.container .nav-pills .nav-link {
     color: #818182;
 }
 
@@ -52,7 +52,7 @@ body {
     padding-bottom: 50px
 }
 
-.l-container {
+.container {
     width: 1000px;
     margin: 0 auto;
     padding-top: 10px;
@@ -62,7 +62,7 @@ body {
     padding: 15px 0px;
 }
 
-.header {
+.header, .footer-container {
     text-align: center;
     background-color: #9ce3f7;
 }
@@ -87,3 +87,4 @@ body {
     float: none;
     margin-bottom: 10px;
 }
+
