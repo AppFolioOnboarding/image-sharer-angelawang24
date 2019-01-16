@@ -4,14 +4,7 @@
       <h1>Welcome to Image Sharer!</h1>
     </div>
 
-    <nav class="nav nav-pills nav-justified">
-      <li class="nav-item">
-        <%= link_to 'Save an Image', new_image_path, class: "nav-link active" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'About', "#", class:"nav-link"%>
-      </li>
-    </nav>
+    <%= render 'mainnav' %>
 
     <ul class="content img-list">
       <% @images.each_slice(2) do |duo| %>

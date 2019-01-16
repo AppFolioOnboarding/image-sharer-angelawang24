@@ -4,17 +4,7 @@
       <h1>Your image: </h1>
     </div>
 
-    <ul class="nav nav-pills nav-justified">
-      <li class="nav-item">
-        <%= link_to 'Back', new_image_path, class:"nav-link active"%>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Home', root_path, class:"nav-link active"%>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'About', "#", class:"nav-link"%>
-      </li>
-    </ul>
+    <%= render 'mainnav' %>
 
     <div class="image-container img-saved">
       <%=image_tag(@image.url, class:'image') %>
