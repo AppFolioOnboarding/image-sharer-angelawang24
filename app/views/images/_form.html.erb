@@ -5,18 +5,13 @@
   </div>
   <div class="field form-group">
     <%= f.text_field :url, class: 'form-control' %>
+    <% if @image.errors.any? %>
+        <div class="error-explanation">
+          <% @image.errors.full_messages.each do |msg| %>
+              <div><%= msg %></div>
+          <% end %>
+        </div>
+    <% end %>
     <%= f.submit "Save" %>
   </div>
-
-   <% if @image.errors.any? %>
-     <div class="error-explanation">
-       <h4><%= pluralize(@image.errors.count, "error") %> prohibited this image from being saved:</h4>
-
-       <ul>
-         <% @image.errors.full_messages.each do |msg| %>
-            <div><%= msg %></div>
-         <% end %>
-       </ul>
-     </div>
-    <% end %>
 <% end %>
