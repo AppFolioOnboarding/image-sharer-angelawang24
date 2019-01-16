@@ -1,21 +1,30 @@
-<div class="container">
-  <div class="l-header header">
-    <h1>Your image: </h1>
+<body class="wrapper">
+  <div class="container">
+    <div class="l-header header">
+      <h1>Your image: </h1>
+    </div>
+
+    <ul class="nav nav-pills nav-justified">
+      <li class="nav-item">
+        <%= link_to 'Back', new_image_path, class:"nav-link active"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Home', root_path, class:"nav-link active"%>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'About', "#", class:"nav-link"%>
+      </li>
+    </ul>
+
+    <div class="image img-saved">
+      <%=image_tag(@image.url, class:'l-image') %>
+    </div>
   </div>
+</body>
 
-  <ul class="nav nav-pills nav-justified">
-    <li class="nav-item">
-      <%= link_to 'Back', new_image_path, class:"nav-link active"%>
-    </li>
-    <li class="nav-item">
-      <%= link_to 'Home', root_path, class:"nav-link active"%>
-    </li>
-    <li class="nav-item">
-      <%= link_to 'About', "#", class:"nav-link"%>
-    </li>
-  </ul>
-
-  <div class="image img-saved">
-    <%=image_tag(@image.url, class:'l-image') %>
+<div class="navbar navbar-default navbar-fixed-bottom footer">
+  <div class="container">
+    <p class="navbar-text">© 2019 - Site Built By Angela Wang. </p>
   </div>
 </div>
+
