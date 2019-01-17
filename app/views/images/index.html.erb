@@ -6,6 +6,11 @@
 
     <%= render 'mainnav' %>
 
+    <%= form_tag(images_path, method: :get) do %>
+        Tag <%= text_field_tag :tag, params[:tag], class: 'search-tag-box'%>
+        <%= submit_tag 'Search', name: nil, class: 'search-tag-btn' %>
+    <% end %>
+
     <ul class="content img-list">
       <% @images.each_slice(2) do |duo| %>
         <div class="card-deck">
@@ -15,6 +20,7 @@
                   <div class="image-container">
                     <%=image_tag(img.url, class: "image") %>
                   </div>
+
                   <div class="card-img-tags">
                     <p>Tags: <%= img.tag_list %></p>
                   </div>
