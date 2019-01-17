@@ -19,4 +19,15 @@ class ImageTest < ActiveSupport::TestCase
     assert_equal "can't be blank", blank_url.errors.messages[:url].second
     assert_equal 'is not a valid image url', invalid_jpg_url.errors.messages[:url].first
   end
+
+  def test_tags_saved_to_img
+    dog_img_with_tags = Image.new url: images(:valid_img).url, tag_list: images(:valid_img).tags
+    assert dog_img_with_tags.save
+    assert_equal images(:valid_img).tag_list, dog_img_with_tags.tags
+
+    dog_img_no_tags = Image.new url: images(:valid_img).url
+    assert dog_img_no_tags.save
+    puts dog_img_no_tags.tags
+    assert_equal 0, dog_img_no_tags.tags.count
+  end
 end
