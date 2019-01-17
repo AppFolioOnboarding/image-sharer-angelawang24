@@ -4,10 +4,10 @@ require 'net/http'
 class ImagesController < ApplicationController
   def index
     @images = if params[:tag]
-      Image.tagged_with(params[:tag]).order(created_at: :desc)
-    else
-      Image.order(created_at: :desc)
-    end
+                Image.tagged_with(params[:tag]).order(created_at: :desc)
+              else
+                Image.order(created_at: :desc)
+              end
   end
 
   def new
