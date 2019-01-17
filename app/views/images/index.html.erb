@@ -1,19 +1,34 @@
-<body class="home">
-<div class="l-container">
-  <div class="l-header header">
-    <h1>Welcome to Image Sharer!</h1>
-  </div>
+<body class="wrapper">
+  <div class="container">
+    <div class="l-header header">
+      <h1>Welcome to Image Sharer!</h1>
+    </div>
 
-  <div class="content">
-    <%= link_to 'Save an Image', new_image_path, class: "btn btn-primary" %>
-  </div>
+    <%= render 'mainnav' %>
 
-  <ul class="content img-list">
-    <% @images.each do |img| %>
-        <li><%=image_tag(img.url, class: "image") %></li>
-    <% end %>
-  </ul>
-</div>
+    <ul class="content img-list">
+      <% @images.each_slice(2) do |duo| %>
+        <div class="card-deck">
+          <% duo.each do |img| %>
+              <div class="card">
+                <div class="card-body d-flex flex-column">
+                  <div class="image-container">
+                    <%=image_tag(img.url, class: "image") %>
+                  </div>
+                  <%= link_to 'Go To Image', img.url, class: "btn btn-sml card__btn mt-auto" %>
+                </div>
+              </div>
+          <% end %>
+         </div>
+      <% end %>
+    </ul>
+  </div>
 </body>
+
+<div class="navbar navbar-default navbar-fixed-bottom footer">
+  <div class="container">
+    <p class="navbar-text">© 2019 - Site Built By Angela Wang. </p>
+  </div>
+</div>
 
 

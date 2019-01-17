@@ -1,14 +1,19 @@
+<body class="wrapper">
+  <div class="container">
+    <div class="l-header header">
+      <h1>Submit an image </h1>
+    </div>
 
-<div class="l-container">
-  <div class="l-header header">
-    <h1>Submit an image </h1>
+    <%= render 'mainnav' %>
+
+    <div class="new-image">
+      <%= render 'form' %>
+    </div>
   </div>
+</body>
 
-  <div class="content">
-    <%= link_to 'Home', root_path %>
-  </div>
-
-  <div class="new-image">
-    <%= render 'form' %>
+<div class="navbar navbar-default navbar-fixed-bottom footer">
+  <div class="container">
+    <p class="navbar-text">© 2019 - Site Built By Angela Wang. </p>
   </div>
 </div>

@@ -7,6 +7,7 @@ class Image < ApplicationRecord
   def valid_image?
     valid_ending = %w[jpeg jpg gif png]
     ending = url.split('.').last
-    errors.add(:url, 'is not a valid image url') unless valid_ending.include? ending
+    is_valid_url = URI.parse(url).is_a?(URI::HTTP)
+    errors.add(:url, 'is not a valid image url') unless is_valid_url && valid_ending.include?(ending)
   end
 end

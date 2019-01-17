@@ -1,0 +1,11 @@
+<nav class="nav nav-pills nav-justified">
+  <li class="nav-item">
+    <%= link_to 'Home', root_path, class:"nav-link #{determine_active('index')}" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to 'Save an Image', new_image_path, class: "nav-link #{determine_active('new')}" %>
+  </li>
+  <li class="nav-item">
+    <%= link_to 'About', "#", class:"nav-link #{determine_active('about')}"%>
+  </li>
+</nav>

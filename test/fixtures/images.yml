@@ -5,3 +5,6 @@ valid_img:
 
 invalid_img:
   url: 'https://www.google.com/'
+
+invalid_jpg_url:
+  url: 'jpg'

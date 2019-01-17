@@ -1,11 +1,20 @@
-<div class="l-container">
-  <div class="l-header header">
-    <h1>Your image: </h1>
-  </div>
+<body class="wrapper">
+  <div class="container">
+    <div class="l-header header">
+      <h1>Your image: </h1>
+    </div>
 
-  <div class="content">
-    <%= link_to "Back", new_image_path %>
-  </div>
+    <%= render 'mainnav' %>
 
-  <%=image_tag(@image.url, class: "image") %>
+    <div class="image-container img-saved">
+      <%=image_tag(@image.url, class:'image') %>
+    </div>
+  </div>
+</body>
+
+<div class="navbar navbar-default navbar-fixed-bottom footer">
+  <div class="container">
+    <p class="navbar-text">© 2019 - Site Built By Angela Wang. </p>
+  </div>
 </div>
+
