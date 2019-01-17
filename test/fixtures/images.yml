@@ -2,9 +2,16 @@
 
 valid_img:
   url: 'https://cdn.pixabay.com/photo/2016/02/19/15/46/dog-1210559__340.jpg'
+  tags: 'dog, animal'
 
 invalid_img:
   url: 'https://www.google.com/'
+  tags: ''
 
 invalid_jpg_url:
   url: 'jpg'
+  tags: ''
+
+no_tag_img:
+  url: 'https://www.fiftyflowers.com/site_files/FiftyFlowers/Image/Product/Mini-Black-Eye-bloom-350_c7d02e72.jpg'
+  tags: ''

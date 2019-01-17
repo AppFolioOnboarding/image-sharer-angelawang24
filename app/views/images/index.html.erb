@@ -15,6 +15,9 @@
                   <div class="image-container">
                     <%=image_tag(img.url, class: "image") %>
                   </div>
+                  <div class="card-img-tags">
+                    <p>Tags: <%= img.tag_list %></p>
+                  </div>
                   <%= link_to 'Go To Image', img.url, class: "btn btn-sml card__btn mt-auto" %>
                 </div>
               </div>

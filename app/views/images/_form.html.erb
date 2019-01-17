@@ -1,9 +1,7 @@
 <%= simple_form_for @image do |f| %>
 
-  <div class="l-new-img-header">
-    <h5>Enter URL of image to save</h5>
-  </div>
   <div class="field form-group">
+    <%= f.label :url, 'Enter URL of image to save' %><br/>
     <%= f.text_field :url, class: 'form-control' %>
     <% if @image.errors.any? %>
         <div class="error-explanation">
@@ -12,6 +10,8 @@
           <% end %>
         </div>
     <% end %>
+    <%= f.label :tag_list, 'Tags (separated by commas)' %><br/>
+    <%= f.text_field :tag_list, class: 'form-control' %>
     <%= f.submit "Save" %>
   </div>
 <% end %>

@@ -1,6 +1,7 @@
 class Image < ApplicationRecord
   validate :valid_image?
   validates :url, presence: true
+  acts_as_taggable_on :tags
 
   private
 
