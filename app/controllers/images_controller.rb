@@ -24,12 +24,23 @@ class ImagesController < ApplicationController
   end
 
   def show
-    @image = Image.find(params[:id])
+    @image = Image.find(image_params)
+  end
+
+  def destroy
+    @image = Image.find(image_params)
+    @image.destroy
+
+    redirect_to images_path, notice: "Delete success"
   end
 
   protected
 
   def create_params
     params.require(:image).permit(:url, :tag_list)
+  end
+
+  def image_params
+    params.require(:id)
   end
 end

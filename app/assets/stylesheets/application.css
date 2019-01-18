@@ -32,12 +32,12 @@ body {
 .container .nav-pills .nav-link.active,
 .search-tag-btn {
     background-color: #818182;
-    border-color: #818182;
     color: white;
 }
 
-.card__btn {
-    width: 200px;
+.btn-group .card__btn {
+    width: 150px;
+    border: 1.5px solid black;
 }
 
 .card__btn:hover,

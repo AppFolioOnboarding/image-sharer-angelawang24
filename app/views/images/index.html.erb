@@ -26,7 +26,12 @@
                           <%= link_to tag, images_path(tag: tag) %>
                       <% end %></p>
                   </div>
-                  <%= link_to 'Go To Image', img.url, class: "btn btn-sml card__btn mt-auto" %>
+
+                  <div class="btn-group" role="group">
+                    <%= link_to 'Go To Image', img.url, class: "btn btn-sml card__btn" %>
+                    <%= link_to 'Delete', image_path(img), method: :delete,
+                                data: { confirm: 'Are you sure?' }, class: "btn btn-sml card__btn" %>
+                  </div>
                 </div>
               </div>
           <% end %>
