@@ -11,7 +11,8 @@
         </div>
     <% end %>
     <%= f.label :tag_list, 'Tags (separated by commas)' %><br/>
-    <%= f.input :tag_list, input_html: {value: @image.tag_list.split(" ").join(', ')}, class: 'form-control' %>
+    <%= f.input :tag_list, input_html: {value: @image.tag_list.split(" ").join(', ')},
+                label: false, class: 'form-control' %>
     <%= f.submit "Save" %>
   </div>
 <% end %>
