@@ -6,13 +6,11 @@ module PageObjects
       collection :tag_elements, locator: '.img-tags', item_locator: '.card__tag'
 
       def image_url
-        # node.find("img[src=\"#{url}\"]")
         node.find('.image')['src']
       end
 
       def tags
         tag_elements.map(&:text)
-        # node.all('.card__tag-link').map(&:text)
       end
 
       def delete
@@ -21,8 +19,7 @@ module PageObjects
       end
 
       def delete_and_confirm!
-        node.click_on('Delete')
-        node.driver.browser.switch_to.alert.accept
+        delete(&:accept)
         window.change_to(IndexPage)
       end
 
