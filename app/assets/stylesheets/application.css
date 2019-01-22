@@ -37,7 +37,7 @@ body {
 
 .btn-group .card__btn {
     width: 150px;
-    border: 1.5px solid black;
+    border: 1.25px solid black;
 }
 
 .card__btn:hover,
