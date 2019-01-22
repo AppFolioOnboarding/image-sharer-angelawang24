@@ -30,7 +30,7 @@ class ImagesControllerTest < ActionDispatch::IntegrationTest
     end
 
     assert_redirected_to image_path(Image.last.id)
-    assert_equal 'Image was successfully created.', flash[:notice]
+    assert_equal 'You have successfully added an image.', flash[:success]
   end
 
   def test_create__fail

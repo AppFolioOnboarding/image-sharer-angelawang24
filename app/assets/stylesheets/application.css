@@ -32,12 +32,12 @@ body {
 .container .nav-pills .nav-link.active,
 .search-tag-btn {
     background-color: #818182;
-    border-color: #818182;
     color: white;
 }
 
-.card__btn {
-    width: 200px;
+.btn-group .card__btn {
+    width: 150px;
+    border: 1.25px solid black;
 }
 
 .card__btn:hover,
@@ -72,7 +72,7 @@ body {
     width: 100%;
 }
 
-.error-explanation {
+.help-block {
     color: #f00;
     padding-top: 10px;
 }
@@ -106,10 +106,10 @@ body {
     position:relative;
 }
 
-.img-tags {
+.img-tags, .img-tags-header {
     text-align: center;
 }
 
 .search-tag-box {
-    width: 90%
+    width: 90%;
 }

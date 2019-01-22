@@ -17,19 +17,32 @@ class ImagesController < ApplicationController
   def create
     @image = Image.new(create_params)
     if @image.save
-      redirect_to @image, notice: 'Image was successfully created.'
+      flash[:success] = 'You have successfully added an image.'
+      redirect_to @image
     else
       render :new
     end
   end
 
   def show
-    @image = Image.find(params[:id])
+    @image = Image.find(image_params)
+  end
+
+  def destroy
+    @image = Image.find(image_params)
+    @image.destroy
+
+    flash[:success] = 'You have successfully deleted the image.'
+    redirect_to images_path
   end
 
   protected
 
   def create_params
     params.require(:image).permit(:url, :tag_list)
+  end
+
+  def image_params
+    params.require(:id)
   end
 end
