@@ -4,14 +4,14 @@
     <%= f.label :url, 'Enter URL of image to save' %><br/>
     <%= f.text_field :url, class: 'form-control' %>
     <% if @image.errors.any? %>
-        <div class="error-explanation">
+        <div class="help-block">
           <% @image.errors.full_messages.each do |msg| %>
               <div><%= msg %></div>
           <% end %>
         </div>
     <% end %>
     <%= f.label :tag_list, 'Tags (separated by commas)' %><br/>
-    <%= f.text_field :tag_list, class: 'form-control' %>
+    <%= f.input :tag_list, input_html: {value: @image.tag_list.split(" ").join(', ')}, class: 'form-control' %>
     <%= f.submit "Save" %>
   </div>
 <% end %>

@@ -17,7 +17,7 @@
   <body id="home">
 
     <% flash.each do |name, msg| -%>
-        <%= content_tag :div, msg, class: name %>
+      <div class="alert alert-<%= name %>"><%= msg %></div>
     <% end -%>
 
     <%= yield %>

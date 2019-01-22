@@ -6,11 +6,12 @@ module PageObjects
       end
 
       def tags
-        # TODO
+        node.all('.card__tag-link').map(&:text)
       end
 
       def click_tag!(tag_name)
-        # TODO
+        node.click_on(tag_name)
+        window.change_to(IndexPage)
       end
     end
   end
